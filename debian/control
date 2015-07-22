@@ -1,0 +1,20 @@
+Source: libsrs-alt
+Priority: optional
+Maintainer: root <root@woofie.cef.spbstu.ru>
+Build-Depends: debhelper (>= 9), autotools-dev, automake
+Standards-Version: 3.9.5
+Section: libs
+Homepage: 
+
+Package: libsrs-alt-dev
+Section: libdevel
+Architecture: any
+Depends: libsrs-alt (= ${binary:Version}), ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: libsrs-alt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
