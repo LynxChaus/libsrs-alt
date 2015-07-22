@@ -1,20 +1,15 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: libsrs-alt
-Source: <url://example.com>
+Upstream-Name: libsrs_alt
+Source: https://opsec.eu/src/srs/libsrs_alt-1.0.tar.bz2
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
-License: <special license>
- <Put the license of the package here indented by 1 space>
- <This follows the format of Description: lines in control file>
- .
- <Including paragraphs>
+Copyright: 2004 Miles Wilton http://srs.mirtol.com
+License: GPL-2
 
 # If you want to use GPL v2 or later for the /debian/* files use 
 # the following clauses, or change it to suit. Delete these two lines
 Files: debian/*
-Copyright: 2015 root <root@woofie.cef.spbstu.ru>
+Copyright: 2015 Andrey Jr. Melnikov <temnota.am@gmail.com>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
