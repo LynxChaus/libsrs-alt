@@ -1,0 +1,101 @@
+v1.0 release - 20 Nov 2006
+--------------------------
+
+20 Nov 2006
+    - Bug fix: lib/sha1.c compiled incorrectly on non-32-bit systems. Now supports x86_64 architecture.
+
+
+
+v1.0rc2 release - 15 Jun 2006
+-----------------------------
+
+15 Jun 2006
+    - Bug fix: Timestamp wrapping code was faulty. Thanks to Simon Johnstone and Colin Spensley.
+
+
+
+v1.0rc1 released - 31 Mar 2005
+------------------------------
+
+30 Mar 2005
+    - Updated a few bits of code (some optimization)
+    - Added compatibility switch for non-standard BASE64 encoding (see README)
+        (Vastly improves MTA compatibility; thanks to those who discussed it)
+    - Added srs_add_secrets function for validating hashes with old secrets
+
+    - Exim 4.50 patch added (will be submitted for inclusion)
+    - Exim: Overhauled to handle SRS transparently for users.
+        (This wasn't the case before as the code was only really designed "to work")
+    - Exim: Added srs_secrets, srs_hashlength, srs_hashmin, srs_maxage, srs_usetimestamp, srs_usehash config variables
+    - Exim: Changed srs_db to srs_dbselect and srs_dbinsert
+    - Exim: Fixed potential bug with specific db/non-db and multiple srs use (don't ask!)
+    - Exim: Tidied srs.c code
+
+    - Updated README.EXIM
+    - Minor updates to test and srs utilities
+
+
+
+
+******************* PREVIOUS VERSIONS **********************
+
+v0.5 released - 29 Sep 2004
+---------------------------
+
+24 Sep 2004
+    - Corrected mistypes in redirect.c (!)
+    - Created update1 patch for exiscan-27
+    - Removed full exim patch (now included in exiscan)
+
+1 Sep 2004
+    - Exim: Added srs_alias option to redirect router
+
+30 Aug 2004
+    - Bug fix: Hash on forwarding an SRS1 address was incorrect
+    - Exim: Bug fix: where only the first x (system dependant) characters of secret were being used
+        (Thanks to Colin Spensley)
+
+
+
+v0.4 released - 29 Jul 2004
+---------------------------
+
+29 Jul 2004
+    - Removed OpenSSL dependancy (uses own HMAC and SHA1 functions)
+
+
+
+v0.3 released - 24 Jun 2004
+---------------------------
+
+24 Jun 2004
+    - Adjusted hash data to make the library compliant with other SRS implementations
+        (NOTE: This actually makes the library slightly less efficient, but for the
+        sake of compatibility...)
+    - Exim: Third option for srs - reverseandforward
+
+
+
+v0.2 released - 4 Jun 2004
+--------------------------
+
+4 Jun 2004
+    - Added srs_set_option with support for
+        - optional use of hash with SRS0
+        - optional use of timestamp with SRS0
+	- database insert/lookup with SRS0 (this should be considered as in alpha stage)
+    - Exim: Added srs_condition option to redirect router
+    - Exim: Added db support
+
+3 Jun 2004
+    - Added srs and srsd (srsd is just a shell script calling srs -d $*)
+    - Bug fix: hash now performed and checked on lowercase version of string
+        (if case is broken, hashed data must be case independant, not just the hash itself)
+    - Changed default hash length to 6 (security concerns)
+
+
+
+v0.1 released - 1 Jun 2004
+--------------------------
+
+Original release

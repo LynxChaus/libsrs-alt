@@ -1,0 +1,20 @@
+************************************************************
+                     CONFIGURE OPTIONS
+************************************************************
+
+
+--with-base64compat
+
+This option alters the behaviour of the base64 encoder built 
+in to libsrs_alt to use the non-standard characters '_' and 
+'.' instead of '+' and '/'. This move vastly improves the 
+compatibility of SRS with MTAs. The option comes highly 
+recommended.
+
+The switch is backward compatible, in that the base64 
+decoder will still recognise '+' and '/' as valid base64 
+characters.
+
+However, it should be noted that this breaks the "SRS 
+Compliancy" (which is a rough standard at best).
+
